@@ -1,0 +1,62 @@
+/* Judge Portal Specific Styles */
+.filter-controls {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.filter-controls select, 
+.filter-controls input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.case-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.case-item {
+  background: var(--light);
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+}
+
+.case-item h4 {
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.view-details-btn {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.detail-section {
+  background: var(--secondary);
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.action-section {
+  margin-top: 30px;
+}
+
+.action-section select,
+.action-section input,
+.action-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.action-section textarea {
+  min-height: 100px;
+}

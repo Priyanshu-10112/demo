@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Judge Portal | Digital Courtroom System</title>
+  <link rel="stylesheet" href="judge.css">
+</head>
+<body>
+  <header>
+    <h1>Judge Portal</h1>
+    <nav>
+      <a href="#" class="btn" id="logout-btn">Logout</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container">
+      <h2>Your Case Docket</h2>
+      
+      <div class="filter-controls">
+        <select id="status-filter">
+          <option value="all">All Cases</option>
+          <option value="pending">Pending</option>
+          <option value="hearing">Hearing Scheduled</option>
+          <option value="completed">Completed</option>
+        </select>
+        <input type="date" id="date-filter">
+      </div>
+      
+      <div class="case-list">
+        <!-- Cases will be populated by JavaScript -->
+      </div>
+      
+      <div class="case-details-view hidden">
+        <h3 id="detail-case-title">Case Title</h3>
+        <div class="detail-section">
+          <p><strong>Case Number:</strong> <span id="detail-case-number"></span></p>
+          <p><strong>Status:</strong> <span id="detail-status"></span></p>
+          <p><strong>Next Hearing:</strong> <span id="detail-next-hearing"></span></p>
+          <p><strong>Parties:</strong> <span id="detail-parties"></span></p>
+        </div>
+        
+        <div class="action-section">
+          <h4>Update Case</h4>
+          <select id="update-status">
+            <option value="pending">Pending</option>
+            <option value="hearing">Hearing Scheduled</option>
+            <option value="adjourned">Adjourned</option>
+            <option value="completed">Completed</option>
+          </select>
+          <input type="date" id="hearing-date">
+          <textarea id="case-notes" placeholder="Add case notes..."></textarea>
+          <button class="btn" id="update-case-btn">Update Case</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="judge.js"></script>
+</body>
+</html>

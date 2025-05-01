@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Courtroom System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Digital Courtroom Management System</h1>
+    <nav>
+      <a href="#citizen-portal" class="btn">Citizen Portal</a>
+      <a href="judge.html" class="btn">Judge/Lawyer Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <div class="container">
+        <h2>Transforming India's Judicial System</h2>
+        <p>Reducing case backlogs through digital innovation</p>
+      </div>
+    </section>
+
+    <section id="citizen-portal" class="portal-section">
+      <div class="container">
+        <h2>Check Your Case Status</h2>
+        <div class="search-box">
+          <input type="text" id="case-number" placeholder="Enter Case Number">
+          <button id="search-btn" class="btn">Search</button>
+        </div>
+        <div id="case-result" class="hidden">
+          <h3>Case Details</h3>
+          <div class="case-details">
+            <p><strong>Status:</strong> <span id="case-status"></span></p>
+            <p><strong>Next Hearing:</strong> <span id="next-hearing"></span></p>
+            <p><strong>Last Updated:</strong> <span id="last-updated"></span></p>
+          </div>
+          <div class="sms-optin">
+            <label>
+              <input type="checkbox" id="sms-checkbox"> Get SMS updates for this case
+            </label>
+            <input type="tel" id="phone-number" placeholder="Mobile Number" class="hidden">
+            <button id="subscribe-btn" class="btn hidden">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2023 Digital Courtroom System | Hackathon Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
