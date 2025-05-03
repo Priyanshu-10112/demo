@@ -15,7 +15,7 @@ public class DemoController{
 		return "ID is saved as "+ui;
 	}
 	@RequestMapping("/info")
-	public String getId() {
+	public String getInfo() {
 		return "Name of the user is "+name+" and Id of the user is "+id;
 	}
 	
