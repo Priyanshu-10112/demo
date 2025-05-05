@@ -32,7 +32,7 @@ public class Filter{
 			}
 			return "not found";
 		}
-		return names.toString()+"\n"+ids.toString();
+		return "Names:"+names.toString()+"\nRespective Ids"+ids.toString();
 	}
 	
 }
