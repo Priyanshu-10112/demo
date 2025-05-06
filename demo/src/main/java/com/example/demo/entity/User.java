@@ -2,14 +2,16 @@ package com.example.demo.entity;
 public class User
 {
 	private String name;
+	private String id;
 	private String userName;
 	private String password;
 	@Override
 	public String toString() {
-		return "User [name=" + name + ", userName=" + userName + ", password=" + password + "]";
+		return "User [id="+id+", name=" + name + ", userName=" + userName + ", password=" + password + "]";
 	}
-	public User(String name, String userName, String password) {
+	public User(String id,String name, String userName, String password) {
 		super();
+		this.id=id;
 		this.name = name;
 		this.userName = userName;
 		this.password = password;
@@ -31,5 +33,11 @@ public class User
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
 	}
 }

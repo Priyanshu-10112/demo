@@ -1,22 +1,48 @@
 package com.example.demo.serviceimpl;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.springframework.stereotype.Service;
-
 import com.example.demo.entity.User;
 import com.example.demo.service.UserService;
 
+import org.springframework.stereotype.Service;
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService {
+    List<User> users = new ArrayList<>();
 
-    List<User> al = new ArrayList<>();
     @Override
-    public User createUser(User user)
-    {
-    	System.out.println("Service Class Working");
-        al.add(user);
-		return user;
-	}
+    public User createUser(User user) {
+        users.add(user);
+        return user;
+    }
+
+    @Override
+    public List<User> getAllUsers() {
+        return users;
+    }
+
+    @Override
+    public User updateUser(String id, User user) {
+        for (User u : users) {
+            if (u.getId().equals(id)) {
+                u.setName(user.getName());
+                u.setUserName(user.getUserName());
+                u.setPassword(user.getPassword());
+                return u;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public User deleteUser(String id) {
+        for (User u : users) {
+            if (u.getId().equals(id)) {
+                users.remove(u);
+                return u;
+            }
+        }
+        return null;
+    }
 }
