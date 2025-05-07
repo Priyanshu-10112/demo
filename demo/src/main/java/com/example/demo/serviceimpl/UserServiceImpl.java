@@ -1,6 +1,7 @@
 package com.example.demo.serviceimpl;
 
 import com.example.demo.entity.User;
+import com.example.demo.exception.UserNotFoundException;
 import com.example.demo.service.UserService;
 
 import org.springframework.stereotype.Service;
@@ -32,7 +33,7 @@ public class UserServiceImpl implements UserService {
                 return u;
             }
         }
-        return null;
+        throw new UserNotFoundException("This id:"+id+" do not exist,Please add this Id or change Id");
     }
 
     @Override
@@ -43,6 +44,6 @@ public class UserServiceImpl implements UserService {
                 return u;
             }
         }
-        return null;
+        throw new UserNotFoundException("This id:"+id+" do not exist,Please add this Id or change Id");
     }
 }
