@@ -20,10 +20,6 @@ public class UserController {
     	user=userService.createUser(user);
         return new ResponseEntity<User>(user,HttpStatus.ACCEPTED);
     }
-//    @PostMapping("/register")
-//    public User createUser(@RequestBody User user) {
-//        return userService.createUser(user);
-//    }
 
     @GetMapping("/all")
     public List<User> getAllUsers() {
