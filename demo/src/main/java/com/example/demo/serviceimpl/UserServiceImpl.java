@@ -26,10 +26,16 @@ public class UserServiceImpl implements UserService {
     public List<User> getAllUsers() {
         return userRepo.findAll();
     }
-
     @Override
-    public User updateUser(String id, User user) {
-        throw new UserNotFoundException("This id:"+id+" do not exist,Please add this Id or change Id");
+  	public User updateUser(String id, User user){
+   		User user1 =userRepo.findById(id).get();
+   		if(user!=null){
+   			user1.setName(user.getName());
+    		user1.setUserName(user.getUserName());
+    		user1.setPassword(user.getPassword());
+    		return userRepo.save(user1); 
+    	}
+    	throw new UserNotFoundException("User with ID " + id + " not found.");
     }
 
     @Override
