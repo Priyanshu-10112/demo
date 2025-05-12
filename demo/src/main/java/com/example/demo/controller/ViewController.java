@@ -10,4 +10,12 @@ public class ViewController {
 	public String home() {
 		return "index";
 	}
+	@RequestMapping("/regis")
+	public String register() {
+		return "regis";
+	}
+	@RequestMapping("/login")
+	public String loginr() {
+		return "login";
+	}
 }
