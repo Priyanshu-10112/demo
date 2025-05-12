@@ -6,7 +6,7 @@
 </head>
 <body>
     <h2>Registration</h2>
-    <form >
+    <form action="/register">
     <table>
     <tr>
         <td><label>Id:</label></td>
@@ -18,14 +18,14 @@
       </tr>
       <tr>
       	<td><label>UserName:</label></td>
-        <td><input type="text" name="username" required></td>
+        <td><input type="text" name="userName" required></td>
         </tr>
         <tr>
         <td><label>Password:</label></td>
         <td><input type="password" name="password" required></td>
         </tr>
         <tr>
-        <td colspan="2" align="center"><input type="submit" value="Login"></td>
+        <td colspan="2" align="center"><input type="submit" value="Register"></td>
         </tr>
     </table>
     </form>

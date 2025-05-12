@@ -6,11 +6,11 @@
 </head>
 <body>
     <h2>Login</h2>
-    <form >
+    <form action="log" >
        <table>
       <tr>
       	<td><label>UserName:</label></td>
-        <td><input type="text" name="username" required></td>
+        <td><input type="text" name="userName" required></td>
         </tr>
         <tr>
         <td><label>Password:</label></td>

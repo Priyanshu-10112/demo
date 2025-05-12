@@ -52,6 +52,25 @@ public class UserServiceImpl implements UserService {
 	public List<User> getUserByName(String name) {
 		return userRepo.findByName(name);
 	}
+
+	@Override
+	public User findByUserNameAndPassword(String userName, String password) {
+		User b=userRepo.findByUserNameAndPassword(userName, password);
+		if(b!=null)System.out.println("login");
+	 	else System.out.println("Invalid");
+		return b;
+	}
+
+	@Override
+	public User processForm(String id, String name, String userName, String password) {
+		User user=new User();
+	 	user.setId(id);
+	 	user.setName(name);
+	 	user.setUserName(userName);
+	 	user.setPassword(password);
+	 	user=createUser(user);
+		return user;
+	}
     
     
 }
