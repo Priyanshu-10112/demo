@@ -6,7 +6,7 @@
 </head>
 <body>
     <h2>Login</h2>
-    <form action="log" >
+    <form action="log" method="post">
        <table>
       <tr>
       	<td><label>UserName:</label></td>

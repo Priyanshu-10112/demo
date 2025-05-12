@@ -2,6 +2,8 @@ package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -20,7 +22,7 @@ public class ViewController {
 	public String register(){
 		return "regis";
 	}
-	 @RequestMapping("/register")
+	 @PostMapping("/register")
 	    public String processForm(@RequestParam String id ,@RequestParam String name ,@RequestParam String userName ,@RequestParam String password) {
 		 	User user=userService.processForm(id, name, userName, password);
 		 	if(user!=null)System.out.println("Registered");
@@ -30,9 +32,10 @@ public class ViewController {
 	public String login() {
 		return "login";
 	}
-	@RequestMapping("/log")
-    public void logForm(@RequestParam String userName ,@RequestParam String password) {
+	@PostMapping("/log")
+    public String logForm(@RequestParam String userName ,@RequestParam String password) {
 	 	userService.findByUserNameAndPassword(userName, password);
+	 	return "index";
     }
 	
 }
