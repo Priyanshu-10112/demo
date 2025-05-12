@@ -47,4 +47,11 @@ public class UserServiceImpl implements UserService {
             }
         throw new UserNotFoundException("This id:"+id+" do not exist,Please add this Id or change Id");
     }
+
+    @Override
+	public List<User> getUserByName(String name) {
+		return userRepo.findByName(name);
+	}
+    
+    
 }
