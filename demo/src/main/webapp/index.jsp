@@ -3,11 +3,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Login Successful!!!</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+    </nav>
+
+    <form>
+        <h2 style="text-align:center;">Welcome to Our Portal</h2>
+        <p style="text-align:center;">Login or Register to continue</p>
+    </form>
 </body>
 </html>
+
 

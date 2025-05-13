@@ -11,9 +11,9 @@ public class GlobalExceptionHandler {
 	{
 		return new ResponseStatus(404,ex.getMessage());
 	}
-	@ExceptionHandler(Exception.class)
-	public String demo(Exception e) 
-	{
-		return "Something went wrong";
-	}
+//	@ExceptionHandler(Exception.class)
+//	public String demo(Exception e) 
+//	{
+//		return "Something went wrong";
+//	}
 }
