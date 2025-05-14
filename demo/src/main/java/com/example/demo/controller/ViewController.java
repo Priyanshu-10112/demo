@@ -66,8 +66,8 @@ public class ViewController {
     }
 
     @GetMapping("/menu")
-    public String menu(Model model, @RequestParam String id) {
-        model.addAttribute("user", userRepository.findById(id).orElse(null));
+    public String menu(Model model, @RequestParam String userName) {
+        model.addAttribute("user", userRepository.findByUserName(userName));
         return "info";
     }
 }

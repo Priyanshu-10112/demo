@@ -9,8 +9,10 @@
 <body>
 <nav>
     <a href="/">Home</a>
-    <a href="/login">Login</a>
-    <a href="/register">Register</a>
+    <a href="/login">LogOut</a>
+    <a href="">Insert</a>
+    <a href="">Update</a>
+    <a href="">About</a>
 </nav>
 
 <%
