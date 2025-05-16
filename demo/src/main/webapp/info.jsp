@@ -7,34 +7,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
 <nav>
-    <a href="/">Home</a>
-    <a href="/login">LogOut</a>
+    <a href="index.jsp">Home</a>
     <a href="">Insert</a>
     <a href="">Update</a>
     <a href="">About</a>
+    <a href="login.jsp">LogOut</a>
 </nav>
-
 <%
     User1 user = (User1) request.getAttribute("user");
     if (user != null) {
 %>
     <div class="user-info">
-        <h2 style="text-align:center;">User Information</h2>
         <table>
-            <tr><td>ID:</td><td><%= user.getId() %></td></tr>
-            <tr><td>Name:</td><td><%= user.getName() %></td></tr>
-            <tr><td>Username:</td><td><%= user.getUserName() %></td></tr>
-            <tr><td>Email:</td><td><%= user.getEmail() %></td></tr>
-            <tr><td>Phone Number:</td><td><%= user.getPhNum() %></td></tr>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>UserName</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><%= user.getId() %></td>
+                    <td><%= user.getName() %></td>
+                    <td><%= user.getUserName() %></td>
+                    <td><%= user.getPhNum() %></td>
+                    <td><%= user.getEmail() %></td>
+                </tr>
+            </tbody>
         </table>
     </div>
-<%
-    } else {
+    <%
+} else {
 %>
-    <p style="text-align:center;">No user data found.</p>
+<p style="text-align:center;">No user data found.</p>
 <%
-    }
+}
 %>
 </body>
 </html>

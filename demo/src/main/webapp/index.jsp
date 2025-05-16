@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,17 +6,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/login">Login</a>
-        <a href="/register">Register</a>
-    </nav>
+    
+<nav>
+    <a href="index.jsp">Home</a>
+    <a href="regis.jsp">Register</a>
+    <a href="login.jsp">Login</a>
+</nav>
 
-    <form>
-        <h2 style="text-align:center;">Welcome to Our Portal</h2>
-        <p style="text-align:center;">Login or Register to continue</p>
-    </form>
+    <div class="container">
+        <form>
+            <h2 style="text-align:center">Welcome to the Portal</h2>
+            <p style="text-align:center;">Please use the navigation above to register, login, or view menu.</p>
+        </form>
+    </div>
 </body>
 </html>
-
-

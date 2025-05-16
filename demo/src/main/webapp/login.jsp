@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,22 +6,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
 <nav>
-    <a href="/">Home</a>
-    <a href="/login">Login</a>
-    <a href="/register">Register</a>
+    <a href="index.jsp">Home</a>
+    <a href="regis.jsp">Register</a>
+    <a href="login.jsp">Login</a>
+    <a href="info.jsp">Menu</a>
 </nav>
 
-<form method="post" action="/login">
-    <h2 style="text-align:center;">Login</h2>
-    <table>
-        <tr><td>Username:</td><td><input type="text" name="userName" required></td></tr>
-        <tr><td>Password:</td><td><input type="password" name="password" required></td></tr>
-    </table>
-    <button type="submit">Login</button>
-    <p>Don't have an account? <a href="/register">Register</a></p>
-</form>
+    <div class="container">
+        <form action="login" method="post">
+            <table>
+                <tr>
+                    <td>Enter UserName:</td>
+                    <td><input type="text" name="userName" required /></td>
+                </tr>
+                <tr>
+                    <td>Enter Password:</td>
+                    <td><input type="password" name="password" required /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="submit">Login</button></td>
+                </tr>
+            </table>
+            <p>Don't have an account? <a href="regis.jsp">Register here</a></p>
+        </form>
+    </div>
 </body>
 </html>
-
-
